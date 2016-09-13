@@ -34,7 +34,6 @@ public class MbtiTestController {
     public String list(Model model) {
         model.addAttribute("datetime", new Date());
         model.addAttribute("mbti", mbtiService.listAllMbti());
-//
 //        mbtiService.getMbtiById(id);
 //        {
 //            if (id <= 5) {
@@ -53,15 +52,19 @@ public class MbtiTestController {
 //                model.addAttribute("p", p);
 //                model.addAttribute("j", j);
 //            }
-
             return "mbti/test/questions";
         }
+    @RequestMapping(value="/mbti/test/getResults", method = RequestMethod.POST)
+    public  String list2(Model model2){
+//        model2.addAttribute("results", resultsService.listAllResults());
+        return "mbti/test/getResults";
+    }
 
 
 //    @RequestMapping("mbti/{id}")
 //    public String showMbti(@PathVariable Integer id, Model model){
 //        model.addAttribute("mbti", mbtiService.getMbtiById(id));
-//        return "getResults";
+//        return "mbti/test/getResults";
 //    }
 
 

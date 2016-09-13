@@ -4,12 +4,23 @@
 
     <title>MBTI TESTER</title>
 
+    <link rel="shortcut icon" href="../../../static/images/MBTIUnicorn.png"
+          th:href="@{../../images/MBTIUnicorn.png}" type="image/x-icon"/>
+
+    <link href="../../../static/css/default.css"
+          th:href="@{../../css/default.css}" rel="stylesheet" media="screen"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 </head>
 <body>
 <h1>Welcome To Your Myers-Briggs Type Indicator Test</h1>
 
 <div fragment="content">
-    <form action="#" th:action="@{/getResults}" th:object="${post}" method="post">
+    <form action="#" th:action="@{getResults}" th:object="${post}" method="post">
         <!--<form name="mbtiTest" th:action="@{/getResults}" method="POST">-->
         <fieldset>
             <legend>Please answer the following questions:</legend>
@@ -21,12 +32,12 @@
             </table>
             <div>
                     <p><b>Question 1</b> This is the first question?</p>
-                        <button type="radio" name="question1" value="EXTROVERSION" style="border: none;">Yes</button>
-                            <button type="radio" name="question1" value="INTROVERSION" style="border: none;">No</button>
+                        <input type="radio" name="question1" value="EXTROVERSION" style="border: none;">Yes</input>
+                            <input type="radio" name="question1" value="INTROVERSION" style="border: none;">No</input>
 
                     <p><b>Question 2</b> This is the second question?</p>
-                        <button type="radio" name="question2" value="EXTROVERSION" style="border: none;">Yes</button>
-                            <button type="radio" name="question2" value="INTROVERSION" style="border: none;">No</button>
+                        <input type="radio" name="question2" value="EXTROVERSION" style="border: none;">Yes</input>
+                            <input type="radio" name="question2" value="INTROVERSION" style="border: none;">No</input>
                     <!--<input type="radio" name="direction" value="EXTROVERSION" >-->
                     <!--<input type="radio" name="direction" value="INTROVERSION" >-->
                     <!--<input type="radio" name="observation" value="SENSING" >-->
