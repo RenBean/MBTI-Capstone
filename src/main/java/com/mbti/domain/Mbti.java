@@ -11,12 +11,17 @@ import java.io.Serializable;
  */
 @Entity
 public class Mbti implements Serializable {
+    public static enum direction { EXTROVERSION, INTROVERSION };
+    public static enum observation { SENSING, INTUITION };
+    public static enum orientation { THINKING, FEELING };
+    public static enum assertion { PERCEIVING, JUDGING };
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String question;
-    private boolean yesOrNo;
+
     // standard getters and setters
 
     public Integer getId() {
@@ -35,11 +40,5 @@ public class Mbti implements Serializable {
         this.question = question;
     }
 
-    public boolean isYesOrNo() {
-        return yesOrNo;
-    }
 
-    public void setYesOrNo(boolean yesOrNo) {
-        this.yesOrNo = yesOrNo;
-    }
 }

@@ -27,14 +27,12 @@ public class MbtiLoader implements ApplicationListener<ContextRefreshedEvent> {
 
         Mbti question1 = new Mbti();
         question1.setQuestion("MBTI Question1 ");
-        question1.isYesOrNo();
         mbtiRepository.save(question1);
 
         log.info("Saved Question1 - id: " + question1.getId());
 
         Mbti question2 = new Mbti();
         question2.setQuestion("MBTI Question2 ");
-        question2.isYesOrNo();
         mbtiRepository.save(question2);
 
         log.info("Saved Question2  - id: " + question2.getId());
