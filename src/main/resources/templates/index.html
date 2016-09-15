@@ -46,6 +46,11 @@
         <area alt="INTP" href="mbti/rationalists/INTP" shape="rect" coords="114,315,155,338" />
         <area alt="INTJ" href="mbti/rationalists/INTJ" shape="rect" coords="150,229,190,252" />
     </map>
-
+    <footer class="footer"
+            style="position: absolute; padding-top:0; padding-bottom:0; bottom:0; ">
+        <div class="container">
+            <p th:text="${#dates.format(datetime, 'dd MMM yyyy')}" class="text-muted">Page was rendered today.</p>
+        </div>
+    </footer>
 </body>
 </html>

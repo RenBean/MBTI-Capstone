@@ -20,7 +20,7 @@
 <h1>Welcome To Your Myers-Briggs Type Indicator Test</h1>
 
 <div fragment="content">
-    <form action="#" th:action="@{getResults}" th:object="${post}" method="post">
+    <form action="#" th:action="@{getResults}" th:object="${POST}" method="post">
         <fieldset>
             <legend>Please answer the following questions:</legend>
             <table class="table table-striped">
@@ -31,69 +31,69 @@
             </table>
             <div>
                 <p><b>Question 1</b> Q1</p>
-                <output th:type="text" th:name="Question1"
-                <input type="radio" name="direction" value="EXTROVERSION" style="border: none;">Yes</input>
-                <input type="radio" name="direction" value="INTROVERSION" style="border: none;">No</input>
+                <output th:type="text" th:name="Question1"></output>
+                <input type="radio" name="Direction" value="EXTROVERSION" style="border: none;">Yes</input>
+                <input type="radio" name="Direction" value="INTROVERSION" style="border: none;">No</input>
                 <p><b>Question 2</b> Q2</p>
-                <input type="radio" name="direction" value="EXTROVERSION" style="border: none;">Yes</input>
-                <input type="radio" name="direction" value="INTROVERSION" style="border: none;">No</input>
+                <input type="radio" name="Direction" value="EXTROVERSION" style="border: none;">Yes</input>
+                <input type="radio" name="Direction" value="INTROVERSION" style="border: none;">No</input>
                 <p><b>Question 3</b> Q3?</p>
-                <input type="radio" name="direction" value="EXTROVERSION" style="border: none;">Yes</input>
-                <input type="radio" name="direction" value="INTROVERSION" style="border: none;">No</input>
+                <input type="radio" name="Direction" value="EXTROVERSION" style="border: none;">Yes</input>
+                <input type="radio" name="Direction" value="INTROVERSION" style="border: none;">No</input>
                 <p><b>Question 4</b> Q4</p>
-                <input type="radio" name="direction" value="INTROVERSION" style="border: none;">Yes</input>
-                <input type="radio" name="direction" value="EXTROVERSION" style="border: none;">No</input>
+                <input type="radio" name="Direction" value="INTROVERSION" style="border: none;">Yes</input>
+                <input type="radio" name="Direction" value="EXTROVERSION" style="border: none;">No</input>
                 <p><b>Question 5</b> Q5</p>
-                <input type="radio" name="direction" value="INTROVERSION" style="border: none;">Yes</input>
-                <input type="radio" name="direction" value="EXTROVERSION" style="border: none;">No</input>
+                <input type="radio" name="Direction" value="INTROVERSION" style="border: none;">Yes</input>
+                <input type="radio" name="Direction" value="EXTROVERSION" style="border: none;">No</input>
 
                 <p><b>Question 6</b> Q5</p>
-                <input type="radio" name="observation" value="SENSING" style="border: none;">Yes</input>
-                <input type="radio" name="observation" value="INTUITION" style="border: none;">No</input>
+                <input type="radio" name="Observation" value="SENSING" style="border: none;">Yes</input>
+                <input type="radio" name="Observation" value="INTUITION" style="border: none;">No</input>
                 <p><b>Question 7</b> Q7</p>
-                <input type="radio" name="observation" value="SENSING" style="border: none;">Yes</input>
-                <input type="radio" name="observation" value="INTUITION" style="border: none;">No</input>
+                <input type="radio" name="Observation" value="SENSING" style="border: none;">Yes</input>
+                <input type="radio" name="Observation" value="INTUITION" style="border: none;">No</input>
                 <p><b>Question 8</b> Q8</p>
-                <input type="radio" name="observation" value="SENSING" style="border: none;">Yes</input>
-                <input type="radio" name="observation" value="INTUITION" style="border: none;">No</input>
+                <input type="radio" name="Observation" value="SENSING" style="border: none;">Yes</input>
+                <input type="radio" name="Observation" value="INTUITION" style="border: none;">No</input>
                 <p><b>Question 9</b> Q9</p>
-                <input type="radio" name="observation" value="INTUITION" style="border: none;">Yes</input>
-                <input type="radio" name="observation" value="SENSING" style="border: none;">No</input>
+                <input type="radio" name="Observation" value="INTUITION" style="border: none;">Yes</input>
+                <input type="radio" name="Observation" value="SENSING" style="border: none;">No</input>
                 <p><b>Question 10</b> Q10</p>
-                <input type="radio" name="observation" value="INTUITION" style="border: none;">Yes</input>
-                <input type="radio" name="observation" value="SENSING" style="border: none;">No</input>
+                <input type="radio" name="Observation" value="INTUITION" style="border: none;">Yes</input>
+                <input type="radio" name="Observation" value="SENSING" style="border: none;">No</input>
 
                 <p><b>Question 11</b> Q11</p>
-                <input type="radio" name="orientation" value="THINKING" style="border: none;">Yes</input>
-                <input type="radio" name="orientation" value="FEELING" style="border: none;">No</input>
+                <input type="radio" name="Orientation" value="THINKING" style="border: none;">Yes</input>
+                <input type="radio" name="Orientation" value="FEELING" style="border: none;">No</input>
                 <p><b>Question 12</b> Q12</p>
-                <input type="radio" name="orientation" value="THINKING" style="border: none;">Yes</input>
-                <input type="radio" name="orientation" value="FEELING" style="border: none;">No</input>
+                <input type="radio" name="Orientation" value="THINKING" style="border: none;">Yes</input>
+                <input type="radio" name="Orientation" value="FEELING" style="border: none;">No</input>
                 <p><b>Question 13</b> Q13</p>
-                <input type="radio" name="orientation" value="THINKING" style="border: none;">Yes</input>
-                <input type="radio" name="orientation" value="FEELING" style="border: none;">No</input>
+                <input type="radio" name="Orientation" value="THINKING" style="border: none;">Yes</input>
+                <input type="radio" name="Orientation" value="FEELING" style="border: none;">No</input>
                 <p><b>Question 14</b> Q14</p>
-                <input type="radio" name="orientation" value="FEELING" style="border: none;">Yes</input>
-                <input type="radio" name="orientation" value="THINKING" style="border: none;">No</input>
+                <input type="radio" name="Orientation" value="FEELING" style="border: none;">Yes</input>
+                <input type="radio" name="Orientation" value="THINKING" style="border: none;">No</input>
                 <p><b>Question 15</b> Q15</p>
-                <input type="radio" name="orientation" value="FEELING" style="border: none;">Yes</input>
-                <input type="radio" name="orientation" value="THINKING" style="border: none;">No</input>
+                <input type="radio" name="Orientation" value="FEELING" style="border: none;">Yes</input>
+                <input type="radio" name="Orientation" value="THINKING" style="border: none;">No</input>
 
                 <p><b>Question 16</b> Q16</p>
-                <input type="radio" name="assertion" value="PERCEIVING" style="border: none;">Yes</input>
-                <input type="radio" name="assertion" value="JUDGING" style="border: none;">No</input>
+                <input type="radio" name="Assertion" value="PERCEIVING" style="border: none;">Yes</input>
+                <input type="radio" name="Assertion" value="JUDGING" style="border: none;">No</input>
                 <p><b>Question 17</b> Q17</p>
-                <input type="radio" name="assertion" value="PERCEIVING" style="border: none;">Yes</input>
-                <input type="radio" name="assertion" value="JUDGING" style="border: none;">No</input>
+                <input type="radio" name="Assertion" value="PERCEIVING" style="border: none;">Yes</input>
+                <input type="radio" name="Assertion" value="JUDGING" style="border: none;">No</input>
                 <p><b>Question 18</b> Q18</p>
-                <input type="radio" name="assertion" value="PERCEIVING" style="border: none;">Yes</input>
-                <input type="radio" name="assertion" value="JUDGING" style="border: none;">No</input>
+                <input type="radio" name="Assertion" value="PERCEIVING" style="border: none;">Yes</input>
+                <input type="radio" name="Assertion" value="JUDGING" style="border: none;">No</input>
                 <p><b>Question 19</b> Q19</p>
-                <input type="radio" name="assertion" value="JUDGING" style="border: none;">Yes</input>
-                <input type="radio" name="assertion" value="PERCEIVING" style="border: none;">No</input>
+                <input type="radio" name="Assertion" value="JUDGING" style="border: none;">Yes</input>
+                <input type="radio" name="Assertion" value="PERCEIVING" style="border: none;">No</input>
                 <p><b>Question 20</b> Q20</p>
-                <input type="radio" name="assertion" value="JUDGING" style="border: none;">Yes</input>
-                <input type="radio" name="assertion" value="PERCEIVING" style="border: none;">No</input>
+                <input type="radio" name="Assertion" value="JUDGING" style="border: none;">Yes</input>
+                <input type="radio" name="Assertion" value="PERCEIVING" style="border: none;">No</input>
 
             </div>
             <button type="submit" class="btn">submit</button>
@@ -101,21 +101,6 @@
     </form>
 </div>
 
-<div>
-    <form action="questions.html" method="POST">
-        UserName:<input type="text" name="textbox" id="textbox"/><br/>
-        PassWord:<input type="password" name="pass" id="pass"/>
-
-    </form>
-</div>
-
-<footer class="footer"
-        style="position: absolute; padding-top:0; padding-bottom:0; bottom:0; background-color: #f5f5f5;">
-    <div class="container">
-        <p th:text="${#dates.format(datetime, 'dd MMM yyyy HH:mm')}" class="text-muted">Page was rendered today.</p>
-    </div>
-
-</footer>
 </body>
 </html>
 

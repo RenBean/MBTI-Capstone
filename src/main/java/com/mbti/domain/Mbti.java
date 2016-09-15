@@ -11,10 +11,10 @@ import java.io.Serializable;
  */
 @Entity
 public class Mbti implements Serializable {
-    public static enum direction { EXTROVERSION, INTROVERSION };
-    public static enum observation { SENSING, INTUITION };
-    public static enum orientation { THINKING, FEELING };
-    public static enum assertion { PERCEIVING, JUDGING };
+    public static enum Direction { EXTROVERSION, INTROVERSION };
+    public static enum Observation { SENSING, INTUITION };
+    public static enum Orientation { THINKING, FEELING };
+    public static enum Assertion { PERCEIVING, JUDGING };
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,12 +22,15 @@ public class Mbti implements Serializable {
 
     private String question;
 
-    // standard getters and setters
+    private Direction direction;
+    private Observation observation;
+    private Orientation orientation;
+    private Assertion assertion;
 
+    // standard getters and setters
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -35,10 +38,39 @@ public class Mbti implements Serializable {
     public String getQuestion() {
         return question;
     }
-
     public void setQuestion(String question) {
         this.question = question;
     }
+
+    public Direction getDirection() {
+        return direction;
+    }
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public Observation getObservation() {
+        return observation;
+    }
+    public void setObservation(Observation observation) {
+        this.observation = observation;
+    }
+
+    public Orientation getOrientation() {
+        return orientation;
+    }
+    public void setOrientation(Orientation orientation) {
+        this.orientation = orientation;
+    }
+
+    public Assertion getAssertion() {
+        return assertion;
+    }
+    public void setAssertion(Assertion assertion) {
+        this.assertion = assertion;
+    }
+
+
 
 
 }
