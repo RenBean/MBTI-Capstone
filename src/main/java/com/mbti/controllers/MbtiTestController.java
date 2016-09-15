@@ -1,5 +1,6 @@
 package com.mbti.controllers;
 
+import com.mbti.domain.Mbti;
 import com.mbti.services.MbtiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MbtiTestController {
     private MbtiService mbtiService;
+    private Mbti mbti;
 
     @Autowired
     public void setMbtiService(MbtiService mbtiService) {
@@ -23,9 +25,13 @@ public class MbtiTestController {
     public String list(Model model) {
 
         model.addAttribute("mbti", mbtiService.listAllMbti());
-
+//        ActionListener
+//        RabbitProperties.Listener.
+//
+//        Attributekey.propertyName
             return "mbti/test/questions";
         }
+
     @RequestMapping(value="/mbti/test/getResults", method = RequestMethod.POST)
     public  String list2(Model model){
 //        model.addAttribute("results", resultsService.listAllResults());
