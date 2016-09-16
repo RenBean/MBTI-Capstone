@@ -11,6 +11,4 @@ public interface MbtiService {
 
     Mbti getMbtiById(Integer id);
 
-
-
 }

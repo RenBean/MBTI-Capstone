@@ -20,21 +20,26 @@ public class MbtiTestController {
     public void setMbtiService(MbtiService mbtiService) {
         this.mbtiService = mbtiService;
     }
+    public void setMbti(Mbti mbti) {this.mbti = mbti;}
 
     @RequestMapping(value = "/mbti/test/questions", method = RequestMethod.GET)
     public String list(Model model) {
 
-        model.addAttribute("mbti", mbtiService.listAllMbti());
-//        ActionListener
-//        RabbitProperties.Listener.
-//
-//        Attributekey.propertyName
+        Iterable<Mbti> mbtis= mbtiService.listAllMbti();
+        for(Mbti mbti1: mbtis){
+            System.out.println("answer = " + mbti1.getAnswer());
+        }
+
+        model.addAttribute("mbtis", mbtiService.listAllMbti());
             return "mbti/test/questions";
         }
 
     @RequestMapping(value="/mbti/test/getResults", method = RequestMethod.POST)
     public  String list2(Model model){
-//        model.addAttribute("results", resultsService.listAllResults());
+        // model.addAttribute("results", resultsService.listAllResults());
+
+//        List<Mbti> listOfMbti = mbti.getAttribute("mbti");
+
         return "mbti/test/getResults";
     }
 

@@ -5,12 +5,20 @@ import com.mbti.repositories.MbtiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 
 /**
  * Created by Ari on 9/6/16.
  */
 @Service
 public class MbtiServiceImpl implements MbtiService{
+
+    private Map<Integer, Mbti> MbtiMap;
+
+    public MbtiServiceImpl() {
+    }
+
     private MbtiRepository mbtiRepository;
 
     //inject an instance of the Spring Data JPA repository

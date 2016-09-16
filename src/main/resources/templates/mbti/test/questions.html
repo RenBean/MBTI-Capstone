@@ -23,12 +23,21 @@
     <form action="#" th:action="@{getResults}" th:object="${POST}" method="post">
         <fieldset>
             <legend>Please answer the following questions:</legend>
+
             <table class="table table-striped">
-                <tr th:each="mbti : ${mbti}">
+                <tr th:each="mbti : ${mbtis}">
                     <td th:text="${mbti.id}"><a href="/mbti/${mbti.id}">Id</a></td>
+                    <td th:text="${mbti.subject}">subject</td>
                     <td th:text="${mbti.question}">question</td>
-                </tr>
-            </table>
+                    <td>
+                        <input type="radio" name="answer" value="1" style="border: none;">Yes</input>
+                        <input type="radio" name="answer" value="0" style="border: none;">No</input>
+
+                            <!--<input type="radio" th:field="${mbti.answer}" th:value="0"  style="border: none;">No</input>-->
+                            <!--<input type="radio" th:field="${mbti.answer}" th:value="1" style="border: none;">Yes</input>-->
+                        </td>
+                    </tr>
+                </table>
             <div>
                 <p><b>Question 1</b> Q1</p>
                 <output th:type="text" th:name="Question1"></output>
