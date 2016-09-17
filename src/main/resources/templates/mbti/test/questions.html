@@ -24,20 +24,20 @@
         <fieldset>
             <legend>Please answer the following questions:</legend>
 
-            <table class="table table-striped">
-                <tr th:each="mbti : ${mbtis}">
-                    <td th:text="${mbti.id}"><a href="/mbti/${mbti.id}">Id</a></td>
-                    <td th:text="${mbti.subject}">subject</td>
-                    <td th:text="${mbti.question}">question</td>
-                    <td>
-                        <input type="radio" name="answer" value="1" style="border: none;">Yes</input>
-                        <input type="radio" name="answer" value="0" style="border: none;">No</input>
+            <!--<table class="table table-striped">-->
+                <!--<tr th:each="mbti : ${mbtis}">-->
+                    <!--<td th:text="${mbti.id}"><a href="/mbti/${mbti.id}">Id</a></td>-->
+                    <!--<td th:text="${mbti.subject}">subject</td>-->
+                    <!--<td th:text="${mbti.question}">question</td>-->
+                    <!--<td>-->
+                        <!--<input type="radio" name="answer" value="1" style="border: none;">Yes</input>-->
+                        <!--<input type="radio" name="answer" value="0" style="border: none;">No</input>-->
 
-                            <!--<input type="radio" th:field="${mbti.answer}" th:value="0"  style="border: none;">No</input>-->
-                            <!--<input type="radio" th:field="${mbti.answer}" th:value="1" style="border: none;">Yes</input>-->
-                        </td>
-                    </tr>
-                </table>
+                            <!--&lt;!&ndash;<input type="radio" th:field="${mbti.answer}" th:value="0"  style="border: none;">No</input>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<input type="radio" th:field="${mbti.answer}" th:value="1" style="border: none;">Yes</input>&ndash;&gt;-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
             <div>
                 <p><b>Question 1</b> Q1</p>
                 <output th:type="text" th:name="Question1"></output>
@@ -103,12 +103,105 @@
                 <p><b>Question 20</b> Q20</p>
                 <input type="radio" name="q20" value="J" style="border: none;">Yes</input>
                 <input type="radio" name="q20" value="P" style="border: none;">No</input>
+                <br/>
+                <input type="button" value="Check" onclick="getRadioValue('Q1', 'Q2', 'Q3', 'Q4', 'Q5')">
 
             </div>
             <!--<button type="button" name="getVal">Get Value of Selected</button>-->
             <button type="submit" class="btn">submit</button>
         </fieldset>
     </form>
+    <form name="theFormName">
+        <input type="radio" name="theRadioGroupName" value="10">
+        <input type="radio" name="theRadioGroupName" value="20">
+        <input type="radio" name="theRadioGroupName" value="30">
+        <input type="radio" name="theRadioGroupName" value="40">
+        <input type="button" value="Check" onclick="getRadioValue('Q1', 'Q2', 'Q3', 'Q4', 'Q5')">
+    </form>
+
+    <script>
+        function getRadioValue(valueName) {
+            var radios = theFormName.elements[valueName];
+            window.rdValue; // declares the global variable 'rdValue'
+            if (rdValue == E || rdValue == I)
+                 var e, i;
+            {
+                if (rdValue == E) {
+                    e++;
+                }
+                if (rdValue == I) {
+                    i++;
+                }
+                if (e>i) {
+                    alert('E')
+                    //                    alert is wrong replace with string
+                }else alert('I');
+            }
+            //todo add result EorI to String X
+
+            if (rdValue == S || rdValue == N)
+                var s, n;
+            {
+                if (rdValue == S) {
+                    s++;
+                }
+                if (rdValue == N) {
+                    n++;
+                }
+                if (s>n) {
+                    alert('S')
+//                    alert is wrong replace with string
+                }else alert('N');
+            }
+            //todo add result SorN to String X
+            if (rdValue == T || rdValue == F)
+                var t, f;
+            {
+                if (rdValue == T) {
+                    t++;
+                }
+                if (rdValue == F) {
+                    f++;
+                }
+                if (t>f) {
+                    alert('T')
+                    //                    alert is wrong replace with string
+                }else alert('F');
+                //todo add result TorF to String X
+            }
+            if (rdValue == P || rdValue == J)
+                var p, j;
+            {
+                if (rdValue == P) {
+                    p++;
+                }
+                if (rdValue == J) {
+                    j++;
+                }
+                if (p>j) {
+                    alert('P')
+//                    alert is wrong replace with string
+                }else alert('J');
+            }
+            //todo add result PorJ to String X
+            //todo return alert String X as result
+
+
+//            var someRadio = radios[i];
+//                if (someRadio.checked) {
+//                    rdValue = someRadio.value;
+//                    break;
+//                }
+//                else rdValue = 'noRadioChecked';
+//            }
+//            if (rdValue == 'E') {
+//                alert('E'); // or: console.log('10')
+//            }
+//            else if (rdValue == 'noRadioChecked') {
+//                alert('no radio checked');
+//            }
+        }
+    </script>
 </div>
 
 
