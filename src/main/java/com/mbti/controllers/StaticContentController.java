@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 //shows path from root (template or index directory/to final containing folder/)
 @RequestMapping(value = "/mbti/")
-public class MbtiController {
+public class StaticContentController {
 
     private MbtiService mbtiService;
 

@@ -19,28 +19,34 @@ public class MbtiLoader implements ApplicationListener<ContextRefreshedEvent> {
     }
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        Mbti mbti = new Mbti();
+        mbti.setSubject(Mbti.Subject.Assertion);
+        mbti.setQuestion("wazup");
+        mbti.setAnswer(0);
+        mbtiRepository.save(mbti);
+
         mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question1",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question2",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question3",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question4",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question5",1));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question2",2));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question3",3));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question4",4));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Direction, "MBTI Question5",5));
 
-        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question6",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question7",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question8",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question9",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question10",1));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question6",6));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question7",7));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question8",8));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question9",9));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Observation, "MBTI Question10",10));
 
-        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question11",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question12",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question13",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question14",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question15",1));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question11",11));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question12",12));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question13",13));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question14",14));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Orientation, "MBTI Question15",15));
 
-        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question16",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question17",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question18",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question19",1));
-        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question20",1));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question16",16));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question17",17));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question18",18));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question19",18));
+        mbtiRepository.save(new Mbti(Mbti.Subject.Assertion, "MBTI Question20",19));
     }
 }
