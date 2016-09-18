@@ -23,14 +23,14 @@ public class MbtiTestController {
     public void setMbti(Mbti mbti) {this.mbti = mbti;}
 
     @RequestMapping(value = "/mbti/test/questions", method = RequestMethod.GET)
-    public String list(Model model) {
+    public String questions(){
 
-        Iterable<Mbti> mbtis= mbtiService.listAllMbti();
-        for(Mbti mbti1: mbtis){
-            System.out.println("answer = " + mbti1.getAnswer());
-        }
-
-        model.addAttribute("mbtis", mbtiService.listAllMbti());
+//    public String list(Model model) {
+//        Iterable<Mbti> mbtis= mbtiService.listAllMbti();
+//        for(Mbti mbti1: mbtis){
+//            System.out.println("answer = " + mbti1.getAnswer());
+//        }
+//        model.addAttribute("mbtis", mbtiService.listAllMbti());
             return "mbti/test/questions";
         }
 

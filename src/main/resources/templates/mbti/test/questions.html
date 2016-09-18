@@ -3,6 +3,8 @@
 <head lang="en">
 
     <title>MBTI TESTER</title>
+    <script src="../../../static/js/resultCalculator.js"
+    th:src="@{../../static/js/resultCalculator.js}"></script>
 
     <link rel="shortcut icon" href="../../../static/images/MBTIUnicorn.png"
           th:href="@{../../images/MBTIUnicorn.png}" type="image/x-icon"/>
@@ -20,41 +22,39 @@
 <h1>Welcome To Your Myers-Briggs Type Indicator Test</h1>
 
 <div fragment="content">
-    <form action="#" th:action="@{getResults}" th:object="${POST}" method="post">
+    <form id="myForm" method="get">
         <fieldset>
             <legend>Please answer the following questions:</legend>
-
-            <!--<table class="table table-striped">-->
-                <!--<tr th:each="mbti : ${mbtis}">-->
-                    <!--<td th:text="${mbti.id}"><a href="/mbti/${mbti.id}">Id</a></td>-->
-                    <!--<td th:text="${mbti.subject}">subject</td>-->
-                    <!--<td th:text="${mbti.question}">question</td>-->
-                    <!--<td>-->
-                        <!--<input type="radio" name="answer" value="1" style="border: none;">Yes</input>-->
-                        <!--<input type="radio" name="answer" value="0" style="border: none;">No</input>-->
-
-                            <!--&lt;!&ndash;<input type="radio" th:field="${mbti.answer}" th:value="0"  style="border: none;">No</input>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<input type="radio" th:field="${mbti.answer}" th:value="1" style="border: none;">Yes</input>&ndash;&gt;-->
-                        <!--</td>-->
-                    <!--</tr>-->
-                <!--</table>-->
             <div>
                 <p><b>Question 1</b> Q1</p>
-                <output th:type="text" th:name="Question1"></output>
-                <input type="radio" name="q1" value="E" style="border: none;">Yes</input>
-                <input type="radio" name="q1" value="I" style="border: none;">No</input>
+                <input type="radio" id="r1" name="q1" value="E" style="border: none;">Yes</input>
+                <input type="radio" id="r2" name="q1" value="I" style="border: none;">No</input>
                 <p><b>Question 2</b> Q2</p>
-                <input type="radio" name="q2" value="E" style="border: none;">Yes</input>
-                <input type="radio" name="q2" value="I" style="border: none;">No</input>
-                <p><b>Question 3</b> Q3?</p>
-                <input type="radio" name="q3" value="E" style="border: none;">Yes</input>
-                <input type="radio" name="q3" value="I" style="border: none;">No</input>
+                <input type="radio" id="r3" name="q2" value="E" style="border: none;">Yes</input>
+                <input type="radio" id="r4" name="q2" value="I" style="border: none;">No</input>
+                <p><b>Question 3</b> Q3</p>
+                <input type="radio" id="r5" name="q3" value="E" style="border: none;">Yes</input>
+                <input type="radio" id="r6" name="q3" value="I" style="border: none;">No</input>
                 <p><b>Question 4</b> Q4</p>
-                <input type="radio" name="q4" value="I" style="border: none;">Yes</input>
-                <input type="radio" name="q4" value="E" style="border: none;">No</input>
+                <input type="radio" id="r7" name="q4" value="I" style="border: none;">Yes</input>
+                <input type="radio" id="r8" name="q4" value="E" style="border: none;">No</input>
                 <p><b>Question 5</b> Q5</p>
-                <input type="radio" name="q5" value="I" style="border: none;">Yes</input>
-                <input type="radio" name="q5" value="E" style="border: none;">No</input>
+                <input type="radio" id="r9" name="q5" value="I" style="border: none;">Yes</input>
+                <input type="radio" id="r10" name="q5" value="E" style="border: none;">No</input>
+            </div>
+            <input type="button" id="button" value="getResults"/>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+<!--<form id="myForm" action="#" th:action="@{getResults}" th:object="${POST}" method="post">-->
+
+<!--<input onclick="getRadioValue('E')" type="radio" name="q1" value="E" style="border: none;">Yes</input>-->
+<!--<input onclick="getRadioValue('q1')" type="radio" name="q1" value="I" style="border: none;">No</input>-->
+<!--<input type="button" value="Check" onclick="getRadioValue('q1?')">-->
+
 
                 <!--<p><b>Question 6</b> Q5</p>-->
                 <!--<input type="radio" name="q6" value="S" style="border: none;">Yes</input>-->
@@ -104,110 +104,8 @@
                 <!--<input type="radio" name="q20" value="J" style="border: none;">Yes</input>-->
                 <!--<input type="radio" name="q20" value="P" style="border: none;">No</input>-->
                 <!--<br/>-->
-                <!--<input type="button" value="Check" onclick="getRadioValue('Q1', 'Q2', 'Q3', 'Q4', 'Q5')">-->
-
-            </div>
-            <!--<button type="button" name="getVal">Get Value of Selected</button>-->
-            <button type="submit" class="btn">submit</button>
-        </fieldset>
-    </form>
-    <!--<form name="theFormName">-->
-        <!--<input type="radio" name="theRadioGroupName" value="10">-->
-        <!--<input type="radio" name="theRadioGroupName" value="20">-->
-        <!--<input type="radio" name="theRadioGroupName" value="30">-->
-        <!--<input type="radio" name="theRadioGroupName" value="40">-->
-        <!--<input type="button" value="Check" onclick="getRadioValue('Q1', 'Q2', 'Q3', 'Q4', 'Q5')">-->
-    <!--</form>-->
-
-    <script>
-        function getRadioValue(valueName) {
-            var radios = theFormName.elements[valueName];
-            window.rdValue; // declares the global variable 'rdValue'
-
-            if (rdValue == E || rdValue == I)
-                 var e, i;
-            {
-                if (rdValue == E) {
-                    e++;
-                }
-                if (rdValue == I) {
-                    i++;
-                }
-                if (e>i) {
-                    alert('E')
-
-                }else alert('I');
-            }
-            //todo add result EorI to String X
-
-            if (rdValue == S || rdValue == N)
-                var s, n;
-            {
-                if (rdValue == S) {
-                    s++;
-                }
-                if (rdValue == N) {
-                    n++;
-                }
-                if (s>n) {
-                    alert('S')
-//                    alert is wrong replace with string
-                }else alert('N');
-            }
-            //todo add result SorN to String X
-            if (rdValue == T || rdValue == F)
-                var t, f;
-            {
-                if (rdValue == T) {
-                    t++;
-                }
-                if (rdValue == F) {
-                    f++;
-                }
-                if (t>f) {
-                    alert('T')
-                    //                    alert is wrong replace with string
-                }else alert('F');
-                //todo add result TorF to String X
-            }
-            if (rdValue == P || rdValue == J)
-                var p, j;
-            {
-                if (rdValue == P) {
-                    p++;
-                }
-                if (rdValue == J) {
-                    j++;
-                }
-                if (p>j) {
-                    alert('P')
-//                    alert is wrong replace with string
-                }else alert('J');
-            }
-            //todo add result PorJ to String X
-            //todo return alert String X as result
 
 
-//            var someRadio = radios[i];
-//                if (someRadio.checked) {
-//                    rdValue = someRadio.value;
-//                    break;
-//                }
-//                else rdValue = 'noRadioChecked';
-//            }
-//            if (rdValue == 'E') {
-//                alert('E'); // or: console.log('10')
-//            }
-//            else if (rdValue == 'noRadioChecked') {
-//                alert('no radio checked');
-//            }
-        }
-    </script>
-</div>
-
-
-</body>
-</html>
 
 
 
