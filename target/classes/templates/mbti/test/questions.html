@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>MBTI TESTER</title>
+    <script src="../../../static/js/resultCalculator.js"
+    th:src="@{../../static/js/resultCalculator.js}"></script>
+
+    <link rel="shortcut icon" href="../../../static/images/MBTIUnicorn.png"
+          th:href="@{../../images/MBTIUnicorn.png}" type="image/x-icon"/>
+
+    <link href="../../../static/css/default.css"
+          th:href="@{../../css/default.css}" rel="stylesheet" media="screen"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+</head>
+<body>
+<h1>Welcome To Your Myers-Briggs Type Indicator Test</h1>
+
+<div fragment="content">
+    <form id="myForm" method="get">
+        <fieldset>
+            <legend>Please answer the following questions:</legend>
+            <div>
+                <p><b>Question 1</b> Q1</p>
+                <input onclick="doEorI()" type="radio" id="r1" name="q1" value="E" style="border: none;">Yes</input>
+                <input onclick="doEorI()" type="radio" id="r2" name="q1" value="I" style="border: none;">No</input>
+                <p><b>Question 2</b> Q2</p>
+                <input onclick="doEorI()" type="radio" id="r3" name="q2" value="E" style="border: none;">Yes</input>
+                <input onclick="doEorI()" type="radio" id="r4" name="q2" value="I" style="border: none;">No</input>
+                <p><b>Question 3</b> Q3</p>
+                <input onclick="doEorI()" type="radio" id="r5" name="q3" value="E" style="border: none;">Yes</input>
+                <input onclick="doEorI()" type="radio" id="r6" name="q3" value="I" style="border: none;">No</input>
+                <p><b>Question 4</b> Q4</p>
+                <input onclick="doEorI()" type="radio" id="r7" name="q4" value="I" style="border: none;">Yes</input>
+                <input onclick="doEorI()" type="radio" id="r8" name="q4" value="E" style="border: none;">No</input>
+                <p><b>Question 5</b> Q5</p>
+                <input onclick="doEorI()" type="radio" id="r9" name="q5" value="I" style="border: none;">Yes</input>
+                <input onclick="doEorI()" type="radio" id="r10" name="q5" value="E" style="border: none;">No</input>
+            </div>
+            <input type="button" id="button" value="getResults"/>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+<!--<form id="myForm" action="#" th:action="@{getResults}" th:object="${POST}" method="post">-->
+
+<!--<input onclick="getRadioValue('E')" type="radio" name="q1" value="E" style="border: none;">Yes</input>-->
+<!--<input onclick="getRadioValue('q1')" type="radio" name="q1" value="I" style="border: none;">No</input>-->
+<!--<input type="button" value="Check" onclick="getRadioValue('q1?')">-->
+
+
+                <!--<p><b>Question 6</b> Q5</p>-->
+                <!--<input type="radio" name="q6" value="S" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q6" value="I" style="border: none;">No</input>-->
+                <!--<p><b>Question 7</b> Q7</p>-->
+                <!--<input type="radio" name="q7" value="S" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q7" value="I" style="border: none;">No</input>-->
+                <!--<p><b>Question 8</b> Q8</p>-->
+                <!--<input type="radio" name="q8" value="S" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q8" value="I" style="border: none;">No</input>-->
+                <!--<p><b>Question 9</b> Q9</p>-->
+                <!--<input type="radio" name="q9" value="I" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q9" value="S" style="border: none;">No</input>-->
+                <!--<p><b>Question 10</b> Q10</p>-->
+                <!--<input type="radio" name="q10" value="I" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q10" value="S" style="border: none;">No</input>-->
+
+                <!--<p><b>Question 11</b> Q11</p>-->
+                <!--<input type="radio" name="q11" value="T" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q11" value="F" style="border: none;">No</input>-->
+                <!--<p><b>Question 12</b> Q12</p>-->
+                <!--<input type="radio" name="q12" value="T" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q12" value="F" style="border: none;">No</input>-->
+                <!--<p><b>Question 13</b> Q13</p>-->
+                <!--<input type="radio" name="q13" value="T" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q13" value="F" style="border: none;">No</input>-->
+                <!--<p><b>Question 14</b> Q14</p>-->
+                <!--<input type="radio" name="q14" value="F" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q14" value="T" style="border: none;">No</input>-->
+                <!--<p><b>Question 15</b> Q15</p>-->
+                <!--<input type="radio" name="q15" value="F" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q15" value="T" style="border: none;">No</input>-->
+
+                <!--<p><b>Question 16</b> Q16</p>-->
+                <!--<input type="radio" name="q16" value="P" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q16" value="J" style="border: none;">No</input>-->
+                <!--<p><b>Question 17</b> Q17</p>-->
+                <!--<input type="radio" name="q17" value="P" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q17" value="J" style="border: none;">No</input>-->
+                <!--<p><b>Question 18</b> Q18</p>-->
+                <!--<input type="radio" name="q18" value="P" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q18" value="J" style="border: none;">No</input>-->
+                <!--<p><b>Question 19</b> Q19</p>-->
+                <!--<input type="radio" name="q19" value="J" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q19" value="P" style="border: none;">No</input>-->
+                <!--<p><b>Question 20</b> Q20</p>-->
+                <!--<input type="radio" name="q20" value="J" style="border: none;">Yes</input>-->
+                <!--<input type="radio" name="q20" value="P" style="border: none;">No</input>-->
+                <!--<br/>-->
+
+
+
+
+

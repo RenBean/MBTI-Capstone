@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>MBTI TESTER</title>
+    <script src="../../../static/js/testForm.js"
+            th:src="@{../../js/testForm.js}"></script>
+
+    <link rel="shortcut icon" href="../../../static/images/MBTIUnicorn.png"
+          th:href="@{../../images/MBTIUnicorn.png}" type="image/x-icon"/>
+
+    <link href="../../../static/css/default.css"
+          th:href="@{../../css/default.css}" rel="stylesheet" media="screen"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+</head>
+<body>
+<h1>Welcome To Your Myers-Briggs Type Indicator Test</h1>
+
+<div fragment="content">
+    <form id="myForm" action="#" th:action="@{getResults}" th:object="${POST}" method="post">
+    <!--<form id="myForm" method="get">-->
+        <fieldset>
+            <legend>Please answer the following questions about yourself:</legend>
+            <div>
+                <p>I am a very enthusiastic person, I like to show my feelings when I am happy-</p>
+                <input  type="radio" id="r1" name="q1" value="E" style="border: none;">Yes</input>
+                <input  type="radio" id="r2" name="q1" value="I" style="border: none;">No</input>
+                <p>I enjoy being around people that are exciting rather then boring-</p>
+                <input  type="radio" id="r3" name="q2" value="E" style="border: none;">Yes</input>
+                <input  type="radio" id="r4" name="q2" value="I" style="border: none;">No</input>
+                <p>I appreciate acknowledgment for a job well done-</p>
+                <input  type="radio" id="r5" name="q3" value="E" style="border: none;">Yes</input>
+                <input  type="radio" id="r6" name="q3" value="I" style="border: none;">No</input>
+                <p>I am a capable and self efficient person, I know what I want and why-</p>
+                <input  type="radio" id="r7" name="q4" value="I" style="border: none;">Yes</input>
+                <input  type="radio" id="r8" name="q4" value="E" style="border: none;">No</input>
+                <p>I am able to separate mental state from my physical environment-</p>
+                <input  type="radio" id="r9" name="q5" value="I" style="border: none;">Yes</input>
+                <input  type="radio" id="r10" name="q5" value="E" style="border: none;">No</input>
+
+                <p>I pay attention to immediate data from my five senses-</p>
+                <input type="radio" id="r11" name="q6" value="S" style="border: none;">Yes</input>
+                <input type="radio" id="r12" name="q6" value="N" style="border: none;">No</input>
+                <p>I stick to tried and true courses of action, I know what works-</p>
+                <input type="radio" id="r13" name="q7" value="S" style="border: none;">Yes</input>
+                <input type="radio" id="r14" name="q7" value="N" style="border: none;">No</input>
+                <p>I am very observant of my surroundings-</p>
+                <input type="radio" id="r15" name="q8" value="S" style="border: none;">Yes</input>
+                <input type="radio" id="r16" name="q8" value="N" style="border: none;">No</input>
+                <p>I am a very abstract thinker, I like to see the possibilities-</p>
+                <input type="radio" id="r17" name="q9" value="N" style="border: none;">Yes</input>
+                <input type="radio" id="r18" name="q9" value="S" style="border: none;">No</input>
+                <p>I am good at spotting big picture patterns, my focus is on the future-</p>
+                <input type="radio" id="r19" name="q10" value="N" style="border: none;">Yes</input>
+                <input type="radio" id="r20" name="q10" value="S" style="border: none;">No</input>
+
+                <p>I prefer dealing with things that are concise and can be properly defined-</p>
+                <input type="radio" id="r21" name="q11" value="T" style="border: none;">Yes</input>
+                <input type="radio" id="r22" name="q11" value="F" style="border: none;">No</input>
+                <p>I judge situations based off of what is important to me at the time-</p>
+                <input type="radio" id="r23" name="q12" value="T" style="border: none;">Yes</input>
+                <input type="radio" id="r24" name="q12" value="F" style="border: none;">No</input>
+                <p>I judge others based on their ability to remain objective and rational-</p>
+                <input type="radio" id="r25" name="q13" value="T" style="border: none;">Yes</input>
+                <input type="radio" id="r26" name="q13" value="F" style="border: none;">No</input>
+                <p>I understand emotions and have a moral obligation to the make decisions I feel are right-</p>
+                <input type="radio" id="r27" name="q14" value="F" style="border: none;">Yes</input>
+                <input type="radio" id="r28" name="q14" value="T" style="border: none;">No</input>
+                <p>I am a very fluid thinker, I believe value can be found in diversity-</p>
+                <input type="radio" id="r29" name="q15" value="F" style="border: none;">Yes</input>
+                <input type="radio" id="r30" name="q15" value="T" style="border: none;">No</input>
+
+                <p>I like to keep my options as open as possible for as long as possible-</p>
+                <input type="radio" id="r31" name="q16" value="P" style="border: none;">Yes</input>
+                <input type="radio" id="r32" name="q16" value="J" style="border: none;">No</input>
+                <p>I love debate-</p>
+                <input type="radio" id="r33" name="q17" value="P" style="border: none;">Yes</input>
+                <input type="radio" id="r34" name="q17" value="J" style="border: none;">No</input>
+                <p>I tend to go with the flow and enjoy the ride-</p>
+                <input type="radio" id="r35" name="q18" value="P" style="border: none;">Yes</input>
+                <input type="radio" id="r36" name="q18" value="J" style="border: none;">No</input>
+                <p>I do not tend to yield to the advice of others, I often find it to be misguided-</p>
+                <input type="radio" id="r37" name="q19" value="J" style="border: none;">Yes</input>
+                <input type="radio" id="r38" name="q19" value="P" style="border: none;">No</input>
+                <p>When it comes to my life I consider myself to be responsible for all of my actions-</p>
+                <input type="radio" id="r39" name="q20" value="J" style="border: none;">Yes</input>
+                <input type="radio" id="r40" name="q20" value="P" style="border: none;">No</input>
+                <br/>
+            </div>
+            <br/><p class="gold" id="test"></p>
+            <!--<input type="submit" id="button" value="Submit"/>-->
+            <input type="button" id="button" value="GetResults" onClick="getResults()"/>
+        </fieldset>
+    </form>
+</div>
+<!--<p id="test"></p>-->
+</body>
+
+<footer>
+    <p><a href="../../">Home</a></p>
+</footer>
+</html>

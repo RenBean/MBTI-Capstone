@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title th:text="#{index.page.title}">mbti</title>
+
+    <link rel="shortcut icon" href="../static/images/MBTIUnicorn.png"
+          th:href="@{images/MBTIUnicorn.png}" type="image/x-icon"/>
+    <title>Myers-Briggs Type Indicator Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../static/css/default.css"
+          th:href="@{css/default.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+
+    <img src="../static/images/Tipos-MBTI.png"
+         th:src="@{images/Tipos-MBTI.png}" alt="mbTypes" usemap="#TypeMap" />
+    <map name="TypeMap" id="TypeMap">
+        <area alt="Test" href="/mbti/test/form" shape="rect" coords="303,309,440,446" />
+
+        <area alt="Guardian" href="mbti/Guardian" shape="rect" coords="345,190,409,241" />
+        <area alt="ISTJ" href="mbti/guardians/ISTJ" shape="rect" coords="216,160,253,189" />
+        <area alt="ISFJ" href="mbti/guardians/ISFJ" shape="rect" coords="303,121,345,148" />
+        <area alt="ESTJ" href="mbti/guardians/ESTJ" shape="rect" coords="400,120,443,146" />
+        <area alt="ESFJ" href="mbti/guardians/ESFJ" shape="rect" coords="487,159,530,183" />
+
+        <area alt="Artisan" href="mbti/Artisan" shape="rect" coords="506,341,563,403" />
+        <area alt="ISTP" href="mbti/artisans/ISTP" shape="rect" coords="555,225,595,244" />
+        <area alt="ISFP" href="mbti/artisans/ISFP" shape="rect" coords="594,312,635,335" />
+        <area alt="ESTP" href="mbti/artisans/ESTP" shape="rect" coords="594,414,637,437" />
+        <area alt="ESFP" href="mbti/artisans/ESFP" shape="rect" coords="554,499,601,523" />
+
+        <area alt="Idealist" href="mbti/Idealist" shape="rect" coords="338,508,409,561" />
+        <area alt="ENFP" href="mbti/idealists/ENFP" shape="rect" coords="491,565,538,591" />
+        <area alt="ENFJ" href="mbti/idealists/ENFJ" shape="rect" coords="400,606,448,627" />
+        <area alt="INFP" href="mbti/idealists/INFP" shape="rect" coords="305,606,352,629" />
+        <area alt="INFJ" href="mbti/idealists/INFJ" shape="rect" coords="219,569,263,592" />
+
+        <area alt="Rationalist" href="mbti/Rationalist" shape="rect" coords="177,348,248,409" />
+        <area alt="ENTP" href="mbti/rationalists/ENTP" shape="rect" coords="150,505,197,525" />
+        <area alt="ENTJ" href="mbti/rationalists/ENTJ" shape="rect" coords="113,414,157,437" />
+        <area alt="INTP" href="mbti/rationalists/INTP" shape="rect" coords="114,315,155,338" />
+        <area alt="INTJ" href="mbti/rationalists/INTJ" shape="rect" coords="150,229,190,252" />
+    </map>
+    <footer class="footer"
+            style="position: absolute; padding-top:0; padding-bottom:0; bottom:0; ">
+        <div class="container">
+            <p th:text="${#dates.format(datetime, 'dd MMM yyyy')}" class="text-muted">Page was rendered today.</p>
+        </div>
+    </footer>
+</body>
+</html>
