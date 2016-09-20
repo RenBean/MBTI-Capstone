@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <script src="../../../static/js/testForm.js"
+            th:src="@{../../js/testForm.js}"></script>
+
     <title>MBTI Results</title>
     <link rel="shortcut icon" href="../../../static/images/MBTIUnicorn.png"
           th:href="@{../../images/MBTIUnicorn.png}" type="image/x-icon"/>
@@ -16,6 +19,9 @@
 </head>
 <body>
 <h1>Your MBTI Results Are:</h1>
+<p id="test"></p>
+<input type="button" id="button" value="getResults" onClick="getResults()"/>
+
 
 </body>
 </html>

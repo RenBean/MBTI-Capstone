@@ -22,7 +22,7 @@ public class MbtiTestController {
     }
     public void setMbti(Mbti mbti) {this.mbti = mbti;}
 
-    @RequestMapping(value = "/mbti/test/questions", method = RequestMethod.GET)
+    @RequestMapping(value = "/mbti/test/form", method = RequestMethod.GET)
     public String questions(){
 
 //    public String list(Model model) {
@@ -31,7 +31,7 @@ public class MbtiTestController {
 //            System.out.println("answer = " + mbti1.getAnswer());
 //        }
 //        model.addAttribute("mbtis", mbtiService.listAllMbti());
-            return "mbti/test/questions";
+            return "mbti/test/form";
         }
 
     @RequestMapping(value="/mbti/test/getResults", method = RequestMethod.POST)

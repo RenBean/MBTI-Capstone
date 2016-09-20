@@ -1,20 +1,20 @@
 /**
  * Created by Ari on 9/17/16.
  */
+var e, i, s, n, t, f, p, j;
+e=0; i=0; s=0; n=0; t=0; f=0; p=0; j=0;
+
 function doFirst() {
     var button = document.getElementById("button");
     var str;
     doEorI();
     if (e>i){
-        window.alert(str + "E")
+        window.alert(str += "E");
     } else if (i>e){
-        window.alert(str + "I")
+        window.alert(str += "I");
     }
 }
-
-
 function doEorI() {
-    var e, i;
     //q1
     if (document.getElementById('r1').checked){
         e++;
