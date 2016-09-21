@@ -1,12 +1,13 @@
+com/mbti/domain/Mbti$Subject.class
 com/mbti/bootstrap/MbtiLoader.class
 com/mbti/MbtiApplication.class
-com/mbti/controllers/MbtiController.class
 com/mbti/configuration/SecurityConfiguration.class
 com/mbti/controllers/IndexController.class
 com/mbti/repositories/MbtiRepository.class
 com/mbti/configuration/RepositoryConfiguration.class
 com/mbti/domain/Mbti.class
 com/mbti/services/MbtiService.class
-com/mbti/configuration/MvcConfig.class
+com/mbti/controllers/MbtiTestController.class
+com/mbti/controllers/StaticContentController.class
 com/mbti/configuration/WebConfiguration.class
 com/mbti/services/MbtiServiceImpl.class

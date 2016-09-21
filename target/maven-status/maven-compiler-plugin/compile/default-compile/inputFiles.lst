@@ -1,12 +1,12 @@
+/Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/controllers/MbtiTestController.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/repositories/MbtiRepository.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/bootstrap/MbtiLoader.java
-/Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/configuration/MvcConfig.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/configuration/RepositoryConfiguration.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/services/MbtiService.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/controllers/IndexController.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/configuration/SecurityConfiguration.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/configuration/WebConfiguration.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/services/MbtiServiceImpl.java
-/Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/controllers/MbtiController.java
+/Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/controllers/StaticContentController.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/domain/Mbti.java
 /Users/Ari/IdeaProjects/MBTI/src/main/java/com/mbti/MbtiApplication.java

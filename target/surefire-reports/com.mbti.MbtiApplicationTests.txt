@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mbti.MbtiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.883 sec - in com.mbti.MbtiApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.11 sec - in com.mbti.MbtiApplicationTests
